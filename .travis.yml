@@ -6,12 +6,14 @@ node_js:
 before_install:
 - npm install -g typescript
 script:
+- cd functions && npm install --only=dev
+- cd ..
 - ng build
-cache:
-  directories:
-  - node_modules
-
 deploy:
   provider: firebase
   token:
     secure: jgi2comXNZ9PQGaQCtie7MnHZB03/VIj7KUrvj8D84h+6Vzh8nCLtz/Pe7myLl2Rr/qsIrw1zAcvVGR2PvL5CbERRp6gMeU32dE4XoR1K2HWN2oid6xSTCp3iWEEbuaWOPO2IT+Mu5jtfPfdvKuFXgv51e4NICYlgQGec7G/nAapPKoqEl3s4ePHPdmKDboO+PksjBYAT41LAPoVVIJZWuSRCqPGTWXEGEW/xXpN0/kxpnBpOL672rAGHY0LPuV1dgBr3K8+lwRvEYgCe7HthkGRTBBPeSs0DYLuC3Dp6pN3anqvzxRXISvLlKYZxN5Zh8fl5gLlYqjZB75xw+SEPK2XS4dJi8uHb+4aMMqR9DVrRqz9z4BjplFa9ZJ8DSQjLcuevukCdkrRv+HZigkNrej1WEoff3wpo3timT3/xQwkeI2qj1o0qRPNLhJLMDYY3dDNZmqZi/mzt/2zy+JOD4nVTe4vVWY2yV21/KjIjM+NT4NvQqqk5XwE4eYU9ee82PRTFYrDGqJ1MdXCFLxKexL4Q7nwer+TzwaXcpN0/iZsVU46EB7x6EyYOdV24+MtvNflzouz+RzZ4N1ky4pc76Rqx55jM9rnd6bnFk09IQI57bwHWE34zBoWPXhNDTycVUrjKdn8uGbIqsN2511EkgsQHZS0a1a21y+GsasR2gY=
+cache:
+  directories:
+  - functions/node_modules
+  - node_modules
