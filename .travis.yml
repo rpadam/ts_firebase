@@ -11,6 +11,10 @@ before_install:
 script:
 - ng build
 
+cache: 
+  directories:
+    - node_modules
+
 deploy:
   provider: firebase
   token:
