@@ -1,21 +1,17 @@
 language: node_js
-
 node_js:
-  - 'stable'
-  - '8'
-  - '6'
-
+- stable
+- '8'
+- '6'
 before_install:
 - npm install -g typescript
-
 script:
 - ng build
-
-cache: 
+cache:
   directories:
-    - node_modules
+  - node_modules
 
 deploy:
   provider: firebase
   token:
-    secure: bKFz5ybXC1U3NwAwsrQVMNPndZhvmrLBZ1yGjPQ7m/dHXZeYui6e/xAoX6/jawZ2Q1biGox+svfFcvvkqodkOBMw5zLOD1XHLfID0Wash4VI4LueUNwb/POUlumegON7ZmczWY9mVhyuSvgz1n5Voox4xq6NZ5yQIQc4rIfouGGD6Idtspp9rpzzWxkVXtIMslIIlgbSpojxSf6WjZzW621EzMG01UkO3mOF5ZgfHtKXUX35XQK0vMDjfokCjzF6fvRN6p7w5Ih6M76mxNvLRrMT7rJrZYUgp35hLYv94foUnsNAfCMN1A6tCGkmlNQk3Cwh04UL24AIHdR+7MOdnIBqTNO0SLF36C45XZZdTXv1C4v5LNit4Xan/E9Ipw73LA0lzRRcMeT45VvRJ7ZdpQbvMavYSMFr/WxOfpN1XDE2O/noMKuLO9SDrw7qIh8bu176t72H0ksd7NVmJgHQnNbRvCRL9PLMmO1JRbzFwBq0O6t+EQNhj5wTujJw1+fu3IO6ApQFhzJWGA/+BR6TlvfcrWH8o/GVf5nXqtv4bgG5Qb7j0ur4gFPMBBpAvio3HLq5pLRMMet1Sv9QVSKNxDC3fpRg69ayEX7hWP9p3DOxsUwaLxTx7hqSUFqdbGMBBppmOxJgGcqaSgALfvAbslqlmNal9hEbXpUIEIw7LJo=
+    secure: jgi2comXNZ9PQGaQCtie7MnHZB03/VIj7KUrvj8D84h+6Vzh8nCLtz/Pe7myLl2Rr/qsIrw1zAcvVGR2PvL5CbERRp6gMeU32dE4XoR1K2HWN2oid6xSTCp3iWEEbuaWOPO2IT+Mu5jtfPfdvKuFXgv51e4NICYlgQGec7G/nAapPKoqEl3s4ePHPdmKDboO+PksjBYAT41LAPoVVIJZWuSRCqPGTWXEGEW/xXpN0/kxpnBpOL672rAGHY0LPuV1dgBr3K8+lwRvEYgCe7HthkGRTBBPeSs0DYLuC3Dp6pN3anqvzxRXISvLlKYZxN5Zh8fl5gLlYqjZB75xw+SEPK2XS4dJi8uHb+4aMMqR9DVrRqz9z4BjplFa9ZJ8DSQjLcuevukCdkrRv+HZigkNrej1WEoff3wpo3timT3/xQwkeI2qj1o0qRPNLhJLMDYY3dDNZmqZi/mzt/2zy+JOD4nVTe4vVWY2yV21/KjIjM+NT4NvQqqk5XwE4eYU9ee82PRTFYrDGqJ1MdXCFLxKexL4Q7nwer+TzwaXcpN0/iZsVU46EB7x6EyYOdV24+MtvNflzouz+RzZ4N1ky4pc76Rqx55jM9rnd6bnFk09IQI57bwHWE34zBoWPXhNDTycVUrjKdn8uGbIqsN2511EkgsQHZS0a1a21y+GsasR2gY=
